@@ -1,0 +1,10 @@
+= form_for @lp do |f|
+  - if @lp.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@lp.errors.count, "error")} prohibited this lp from being saved:"
+      %ul
+        - @lp.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

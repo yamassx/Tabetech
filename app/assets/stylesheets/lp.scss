@@ -6,7 +6,7 @@
     margin: 10px auto;
   }
   &__image_slicker {
-    height: 200px;
+    height: 400px;
     width: 100%;
     background-color: yellow;
     margin: 10px auto;
@@ -16,6 +16,14 @@
     width: 100%;
     background-color: yellowgreen;
     margin: 10px auto;
+    .portfolio_link {
+      text-decoration: none;
+      .link_btn {
+        border: solid;
+        height: 30px;
+        width: 70px;
+      }
+    }
   } 
   &__lp-store_management {
     height: 150px;
