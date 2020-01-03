@@ -1,0 +1,28 @@
+= form_for @portfolio do |f|
+  - if @portfolio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@portfolio.errors.count, "error")} prohibited this portfolio from being saved:"
+      %ul
+        - @portfolio.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :string
+    = f.text_field :string
+  .field
+    = f.label :image
+    = f.text_field :image
+  .field
+    = f.label :string
+    = f.text_field :string
+  .field
+    = f.label :content
+    = f.text_field :content
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Save'
