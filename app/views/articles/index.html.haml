@@ -1,27 +1,28 @@
-%h1 Listing articles
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th String
-      %th Content
-      %th Text
-      %th
-      %th
-      %th
+-# %h1 Listing articles
 
-  %tbody
-    - @articles.each do |article|
-      %tr
-        %td= article.title
-        %td= article.string
-        %td= article.content
-        %td= article.text
-        %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
+-# %table
+-#   %thead
+-#     %tr
+-#       %th Title
+-#       %th String
+-#       %th Content
+-#       %th Text
+-#       %th
+-#       %th
+-#       %th
 
-%br
+-#   %tbody
+-#     - @articles.each do |article|
+-#       %tr
+-#         %td= article.title
+-#         %td= article.string
+-#         %td= article.content
+-#         %td= article.text
+-#         %td= link_to 'Show', article
+-#         %td= link_to 'Edit', edit_article_path(article)
+-#         %td= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Article', new_article_path
+-# %br
+
+-# = link_to 'New Article', new_article_path
