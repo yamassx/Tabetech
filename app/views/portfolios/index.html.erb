@@ -33,7 +33,15 @@
 <div class="contents row">
   <% @portfolios.each.with_index do |portfolio| %>
     <div class="content_post" style="background-image: url(<%= portfolio.image %>);">
-      <%= simple_format(portfolio.content) %>
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '詳細', "/portfolios/#{portfolio.id}", method: :get %>
+          </li>
+        </ul>
+      </div>
+     
       <span class="name">
         <%= portfolio.title %>
       </span>

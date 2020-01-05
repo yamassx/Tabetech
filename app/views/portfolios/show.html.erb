@@ -1,0 +1,40 @@
+<header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Eatfolio</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/portfolios/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+<div class ="contents row">
+  <div class="content_post" style="background-image: url(<%= @portfolio.image %>);">
+    
+    <span class="name"><%= @portfolio.title %>
+    </span>
+  </div>
+  <div class = "portfolio_content">
+    <%= simple_format(@portfolio.content) %>
+  </div>
+</div>
+
+
+
+
+<%# %p#notice= notice
+
+%p
+  %b Title:
+  = @portfolio.title
+
+%p
+  %b Image:
+  = @portfolio.image
+
+%p
+  %b Content:
+  = @portfolio.content
+
+
+= link_to 'Edit', edit_portfolio_path(@portfolio)
+\|
+= link_to 'Back', portfolios_path %>
