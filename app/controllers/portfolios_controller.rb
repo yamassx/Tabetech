@@ -10,6 +10,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1
   # GET /portfolios/1.json
   def show
+   
   end
 
   # GET /portfolios/new

@@ -21,10 +21,14 @@ summary {
 .contents {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  .portfolio_content {
+    grid-column: 2 /4 ;
+    border: solid;
+  }
 }
-.content_post {
-  margin: 20px 20px;
-}
+// .content_post {
+//   margin: 20px 20px;
+// }
 
 .submit_form {
   max-width: 800px;
