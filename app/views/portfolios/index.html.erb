@@ -1,0 +1,75 @@
+<head>
+    <title>Eatfolio</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Eatfolio</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/portfolios/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+
+
+<div class="contents row">
+  <% @portfolios.each.with_index do |portfolio| %>
+    <div class="content_post" style="background-image: url(<%= portfolio.image %>);">
+      <%= simple_format(portfolio.content) %>
+      <span class="name">
+        <%= portfolio.title %>
+      </span>
+    </div>
+  <% end %>
+</div>
+
+<footer>
+      <p>
+        Copyright Eatfolio 2019.
+      </p>
+    </footer>
+  </body>
+
+
+
+
+
+
+<%# -# .portfolio 
+  -# .portfolio__header
+  -#   .portfolio__header__login
+  -#     アカウント
+  -#   .portfolio__header__blog-link
+  -#     ブログ
+  -#   .portfolio__header__portfolio-link
+  -#     ポートフォリオ
+  -#   .portfolio__header__search-form
+  -#     %input{ placeholder: "ユーザー検索"}
+  -#   .portfolio__header__search-btn
+  -#     検索
+  -# .portfolio__contents
+  -#   .portfolio__contents__side-bar
+  -#     .portfolio__contents__side-bar__user
+  -#     .portfolio__contents__side-bar__list
+  -#   .portfolio__contents__right
+  -#     .portfolio__contents__right__head
+  -#     .portfolio__contents__right__samary
+       %>
