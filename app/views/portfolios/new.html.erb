@@ -1,0 +1,20 @@
+
+
+<%# -# %h1 New portfolio
+
+-# = render 'form'
+
+-# = link_to 'Back', portfolios_path %>
+<div >
+  <div class = submit_form>
+    <%= form_with(model: @portfolio, local: true) do |form| %>
+      <h3>
+        投稿する
+      </h3>
+      <%= form.text_field :title, placeholder: "Title" %>
+      <%= form.text_field :image, placeholder: "Image Url" %>
+      <%= form.text_area :text, placeholder: "text" , rows: "10" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

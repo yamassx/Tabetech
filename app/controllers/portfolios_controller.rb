@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   # GET /portfolios
   # GET /portfolios.json
@@ -24,17 +24,17 @@ class PortfoliosController < ApplicationController
   # POST /portfolios
   # POST /portfolios.json
   def create
-    @portfolio = Portfolio.new(portfolio_params)
+    Portfolio.create(portfolio_params)
 
-    respond_to do |format|
-      if @portfolio.save
-        format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
-        format.json { render :show, status: :created, location: @portfolio }
-      else
-        format.html { render :new }
-        format.json { render json: @portfolio.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @portfolio.save
+    #     format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
+    #     format.json { render :show, status: :created, location: @portfolio }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @portfolio.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /portfolios/1
@@ -69,6 +69,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:title, :string, :image, :string, :content, :text)
+      params.require(:portfolio).permit(:title, :image, :content)
     end
 end
