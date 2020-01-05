@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :lps
-  root 'portfolios#index'
+  root 'lps#index'
   resources :articles
   resources :portfolios
   post 'portfolios' => 'portfolios#create'
