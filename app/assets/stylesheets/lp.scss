@@ -13,11 +13,11 @@
     font-size: 20px;
     color: whitesmoke;
     .tabetech {
-      color:black;
+      color: rgb(255, 196, 0);
       font-weight: bold;
       font-size: 40px;
       font-family: impact;
-      text-shadow: 5px 5px 1px #999999;
+      text-shadow: 5px 5px 1px #9999999f;
       margin-left: 1em;
     }
   }
@@ -29,6 +29,9 @@
       width: 100%;
       background-color: yellow;
       margin: 10px auto;
+      li {
+        list-style: none;
+      }
       .image {
         max-width: 100%;
         width: 100%;
@@ -38,13 +41,14 @@
       }
     }
     &__lp-portfolio {
-      height: 150px;
+      height: 250px;
       width: 100%;
       // background-color: yellowgreen;
       background-size: 100%;
       background-position: center;
       background-image: image-url('MOK_unitotoro.jpg');
-      margin: 10px auto;
+      opacity: 0.5;
+      margin: 20px auto;
       .portfolio_link {
         text-decoration: none;
         .link_btn {
@@ -55,22 +59,24 @@
       }
     } 
     &__lp-store_management {
-      height: 150px;
+      height: 250px;
       width:100%;
       // background-color: pink;
       background-size: 100%;
       background-position: center;
       background-image: image-url('fishes.jpg');
-      margin: 10px auto;
+      opacity: 0.5;
+      margin: 20px auto;
     }
     &__lp-reserve {
-      height: 150px;
+      height: 250px;
       width: 100%;
       background-color: purple;
-      margin: 10px auto;
+      margin: 20px auto;
       background-size: 100%;
       background-position: center;
       background-image: image-url('9c18c644b6dbc60faf76980547b85843_w.jpg');
+      opacity: 0.5;
     }
   }
 }
