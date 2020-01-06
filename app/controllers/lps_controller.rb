@@ -1,10 +1,12 @@
 class LpsController < ApplicationController
   # before_action :set_lp, only: [:show, :edit, :update, :destroy]
-
+  def no_layout_action
+    render layout: false
+  end
   # GET /lps
   # GET /lps.json
   def index
-    # @lps = Lp.all
+    no_layout_action
   end
 
   # GET /lps/1
