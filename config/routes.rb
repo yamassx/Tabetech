@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :portfolios
   post 'portfolios' => 'portfolios#create'
+  get 'portfolios' => 'portfolios#index'
   resources :users
 end

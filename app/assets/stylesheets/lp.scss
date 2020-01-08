@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
 
 .landing_page {
   background-color:lightgray;
@@ -11,7 +12,8 @@
     margin: 0;
     line-height: 100px;
     font-size: 20px;
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.55);
+    text-shadow:1px 1px 1px lightgray;
     .tabetech {
       color: rgb(255, 196, 0);
       font-weight: bold;
@@ -41,41 +43,32 @@
       }
     }
     &__lp-portfolio {
-      // height: 250px;
-      // width: 100%;
-      // // background-color: yellowgreen;
-      // background-size: 100%;
-      // background-position: center;
-      // background-image: image-url('MOK_unitotoro.jpg');
-      // // opacity: 0.5;
       margin: 20px auto;
       position: relative;
       &__bg {
         height: 250px;
         width: 100%;
-        // background-color: yellowgreen;
         background-size: 100%;
         background-position: center;
         background-image: image-url('MOK_unitotoro.jpg');
-        opacity: 0.5;
+        opacity: 0.6;
       }
       &__header {
         height: 50px;
         line-height: 50px;
-        // padding: 0 1.5em;
-        // margin-top: 0.5em;
-        // margin-left: 0.5em;
         background-color: skyblue;
         position: absolute;
         top: 0.5em;
         left: 0.5em;
         display:flex;
         align-items: center;
+        text-shadow:1px 1px 1px lightgray;
         .eatfolio{
           font-size: 40px;
-          font-family: "HIragino Kaku Gothic Pro W6";
+          font-family: "Unica One";
+          color: rgba(13, 77, 18, 0.527);
+          font-weight: bolder;
           display:inline-block;
-          // background-color: skyblue;
           padding: 0 1.5em;
         }
         p {
@@ -86,8 +79,11 @@
       &__content {
         display: inline-block;
         position: absolute;
-        bottom: 40px;
+        bottom: 20px;
         left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:1px 1px 1px lightgray;
       }
       .portfolio_link {
         text-decoration: none;
@@ -110,7 +106,6 @@
     &__lp-store_management {
       height: 250px;
       width:100%;
-      // background-color: pink;
       background-size: 100%;
       background-position: center;
       background-image: image-url('fishes.jpg');

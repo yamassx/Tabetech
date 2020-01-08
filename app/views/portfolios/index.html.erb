@@ -31,7 +31,7 @@
 
 
 <div class="contents row">
-  <% @portfolios.each.with_index do |portfolio| %>
+  <% @portfolios.each do |portfolio| %>
     <div class="content_post" style="background-image: url(<%= portfolio.image %>);">
       <div class="more">
         <span><%= image_tag 'arrow_top.png' %></span>

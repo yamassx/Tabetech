@@ -21,6 +21,8 @@ summary {
 .contents {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  // display: flex;
+  // justify-content: start;
   .portfolio_content {
     grid-column: 2 /4 ;
     border: solid;

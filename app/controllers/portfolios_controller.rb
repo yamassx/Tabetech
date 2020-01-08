@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+  # before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
   # GET /portfolios
   # GET /portfolios.json
@@ -10,7 +10,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1
   # GET /portfolios/1.json
   def show
-   
+    @portfolio = Portfolio.find(params[:id])
   end
 
   # GET /portfolios/new

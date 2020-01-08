@@ -19,7 +19,6 @@
     〜食xテクノロジーでソリューションをご提案〜
   .landing_page__contents
     .landing_page__contents__image_slicker.slider
-      -# %ul.slider
       %li
         = image_tag 'sushiPAS02123_TP_V.jpg', class: "image"
       %li
@@ -28,10 +27,6 @@
         = image_tag 'BIBAI2122_TP_V.jpg', class: "image"
       %li
         = image_tag 'PAK65_torinosubottlenarabu20130825.jpg', class: "image"
-      -# .landing_page__contents__image_slicker__image
-      -# .landing_page__contents__image_slicker__image2
-      -# .landing_page__contents__image_slicker__image3
-      -# .landing_page__contents__image_slicker__image4
     .landing_page__contents__lp-portfolio
       .landing_page__contents__lp-portfolio__bg
       .landing_page__contents__lp-portfolio__header
@@ -41,7 +36,7 @@
         %p  料理人の作品投稿フォーマットです。
         %p  ◎採用、転職活動に。
         %p  ◎仲間内での研鑚に。
-      =link_to "#", class: "portfolio_link" do
+      = link_to portfolios_path, method: :get, class: "portfolio_link" do
         .link_btn ご利用はこちら
     .landing_page__contents__lp-store_management
     .landing_page__contents__lp-reserve
